@@ -5,8 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_8_CuadrosTexto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cuadros de texto"
+        Height="400"
+        Width="750">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="69,35,0,0"
+                   TextWrapping="Wrap"
+                   Text="Nombre"
+                   VerticalAlignment="Top"
+                   Height="25"
+                   Width="82" />
+        <TextBox HorizontalAlignment="Left"
+                 Height="30"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="178"
+                 Margin="69,60,0,0" />
+        <TextBlock x:Name="mensajeNombreTextBlock" 
+            HorizontalAlignment="Left"
+                   Margin="319,64,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="30"
+                   Width="284" />
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="69,118,0,0"
+                   TextWrapping="Wrap"
+                   Text="Apellidos"
+                   VerticalAlignment="Top"
+                   Height="25"
+                   Width="82" />
+        <TextBox x:Name="apellidoTextBox"
+            HorizontalAlignment="Left"
+                 Height="30"
+                 Margin="69,144,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="178" />
+        <TextBlock x:Name="mensajeApellidoTextBlock"
+            HorizontalAlignment="Left"
+                   Margin="319,144,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="33"
+                   Width="284" />
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="69,208,0,0"
+                   TextWrapping="Wrap"
+                   Text="Edad"
+                   VerticalAlignment="Top"
+                   Height="25"
+                   Width="82" />
+        <TextBox x:Name="edadTextBox"
+            HorizontalAlignment="Left"
+                 Height="30"
+                 Margin="69,235,0,0"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Top"
+                 Width="178" />
+        <TextBlock x:Name="mensajeEdadTextBlock"
+            HorizontalAlignment="Left"
+                   Margin="319,235,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Height="30"
+                   Width="284" />
+
     </Grid>
 </Window>
