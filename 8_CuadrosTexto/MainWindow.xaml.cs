@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _8_CuadrosTexto
 {
@@ -51,5 +42,18 @@ namespace _8_CuadrosTexto
             }
         }
 
+        private void edadTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F2)
+            {
+                string patron = "^[0-9]+$";
+                string edad = edadTextBox.Text;
+                Regex reg = new Regex(patron);
+                if (reg.IsMatch(edad))
+                    mensajeEdadTextBlock.Text = "";
+                else
+                    mensajeEdadTextBlock.Text = "Edad incorrecta";
+            }
+        }
     }
 }
