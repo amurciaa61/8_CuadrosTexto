@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Cuadros de texto"
         Height="400"
-        Width="750">
+        Width="560">
     <Grid>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,35,0,0"
@@ -16,19 +16,23 @@
                    VerticalAlignment="Top"
                    Height="25"
                    Width="82" />
-        <TextBox HorizontalAlignment="Left"
+        <TextBox x:Name="nombreTextBox"
+                 Tag="Nombre"
+            HorizontalAlignment="Left"
                  Height="30"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
                  Width="178"
-                 Margin="69,60,0,0" />
+                 Margin="69,60,0,0" 
+                 KeyUp="TextBox_KeyUp"/>
         <TextBlock x:Name="mensajeNombreTextBlock" 
             HorizontalAlignment="Left"
-                   Margin="319,64,0,0"
+                   Margin="261,64,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
                    Height="30"
-                   Width="284" />
+                   Width="284" 
+                   Foreground="gray"/>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,118,0,0"
                    TextWrapping="Wrap"
@@ -37,19 +41,22 @@
                    Height="25"
                    Width="82" />
         <TextBox x:Name="apellidoTextBox"
+                 Tag="Apellido"
             HorizontalAlignment="Left"
                  Height="30"
                  Margin="69,144,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
-                 Width="178" />
+                 Width="178" 
+                 KeyUp="TextBox_KeyUp"/>
         <TextBlock x:Name="mensajeApellidoTextBlock"
             HorizontalAlignment="Left"
-                   Margin="319,144,0,0"
+                   Margin="261,144,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
                    Height="33"
-                   Width="284" />
+                   Width="284" 
+                   Foreground="gray"/>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,208,0,0"
                    TextWrapping="Wrap"
@@ -66,11 +73,12 @@
                  Width="178" />
         <TextBlock x:Name="mensajeEdadTextBlock"
             HorizontalAlignment="Left"
-                   Margin="319,235,0,0"
+                   Margin="261,235,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
                    Height="30"
-                   Width="284" />
+                   Width="284" 
+                   Foreground="Red"/>
 
     </Grid>
 </Window>

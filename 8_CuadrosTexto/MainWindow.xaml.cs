@@ -24,5 +24,32 @@ namespace _8_CuadrosTexto
         {
             InitializeComponent();
         }
+
+        private void TextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            const string CLIENTE = " del cliente";
+            string etiqueta = (sender as TextBox).Tag.ToString();
+            if (e.Key == Key.F1)
+            {
+                switch (etiqueta)
+                {
+                    case "Nombre":
+                        if (mensajeNombreTextBlock.Text.Length == 0)
+                            mensajeNombreTextBlock.Text = etiqueta + CLIENTE;
+                        else
+                            mensajeNombreTextBlock.Text = "";
+                        break;
+                    case "Apellido":
+                        if (mensajeApellidoTextBlock.Text.Length == 0)
+                            mensajeApellidoTextBlock.Text = etiqueta + CLIENTE;
+                        else
+                            mensajeApellidoTextBlock.Text = "";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
     }
 }
