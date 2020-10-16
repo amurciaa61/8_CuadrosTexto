@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="Cuadros de texto"
         Height="400"
-        Width="560">
+        Width="560"
+        Icon="Imagenes/formulario.ico">
     <Grid>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,35,0,0"
@@ -19,7 +20,7 @@
                    FontSize="14" />
         <TextBox x:Name="nombreTextBox"
                  Tag="Nombre"
-            HorizontalAlignment="Left"
+                 HorizontalAlignment="Left"
                  Height="30"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
@@ -28,7 +29,7 @@
                  KeyUp="TextBox_KeyUp"
                  FontSize="14" />
         <TextBlock x:Name="mensajeNombreTextBlock" 
-            HorizontalAlignment="Left"
+                   HorizontalAlignment="Left"
                    Margin="261,64,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
@@ -46,7 +47,7 @@
                    FontSize="14" />
         <TextBox x:Name="apellidoTextBox"
                  Tag="Apellido"
-            HorizontalAlignment="Left"
+                 HorizontalAlignment="Left"
                  Height="30"
                  Margin="69,144,0,0"
                  TextWrapping="Wrap"
@@ -55,7 +56,7 @@
                  KeyUp="TextBox_KeyUp"
                  FontSize="14" />
         <TextBlock x:Name="mensajeApellidoTextBlock"
-            HorizontalAlignment="Left"
+                   HorizontalAlignment="Left"
                    Margin="261,144,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
@@ -72,7 +73,7 @@
                    Width="82"
                    FontSize="14" />
         <TextBox x:Name="edadTextBox"
-            HorizontalAlignment="Left"
+                 HorizontalAlignment="Left"
                  Height="30"
                  Margin="69,235,0,0"
                  TextWrapping="Wrap"
@@ -81,7 +82,7 @@
                  KeyUp="edadTextBox_KeyUp"
                  FontSize="14" />
         <TextBlock x:Name="mensajeEdadTextBlock"
-            HorizontalAlignment="Left"
+                   HorizontalAlignment="Left"
                    Margin="261,235,0,0"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
