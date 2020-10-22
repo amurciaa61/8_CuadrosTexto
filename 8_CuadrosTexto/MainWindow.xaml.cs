@@ -14,31 +14,20 @@ namespace _8_CuadrosTexto
         public MainWindow()
         {
             InitializeComponent();
+            nombreTextBox.Tag = mensajeNombreTextBlock;
+            apellidoTextBox.Tag = mensajeApellidoTextBlock;
         }
 
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            const string CLIENTE = " del cliente";
-            string etiqueta = (sender as TextBox).Tag.ToString();
+            TextBox tb = sender as TextBox;
+            TextBlock objetoTextBlock = (TextBlock)tb.Tag;
             if (e.Key == Key.F1)
             {
-                switch (etiqueta)
-                {
-                    case "Nombre":
-                        if (mensajeNombreTextBlock.Text.Length == 0)
-                            mensajeNombreTextBlock.Text = etiqueta + CLIENTE;
-                        else
-                            mensajeNombreTextBlock.Text = "";
-                        break;
-                    case "Apellido":
-                        if (mensajeApellidoTextBlock.Text.Length == 0)
-                            mensajeApellidoTextBlock.Text = etiqueta + CLIENTE;
-                        else
-                            mensajeApellidoTextBlock.Text = "";
-                        break;
-                    default:
-                        break;
-                }
+                if (objetoTextBlock.IsVisible)
+                    objetoTextBlock.Visibility = Visibility.Hidden;
+                else
+                    objetoTextBlock.Visibility = Visibility.Visible;
             }
         }
 
@@ -46,11 +35,10 @@ namespace _8_CuadrosTexto
         {
             if (e.Key == Key.F2)
             {
-                string patron = "^[0-9]+$";
-                string edad = edadTextBox.Text;
-                Regex reg = new Regex(patron);
-                if (reg.IsMatch(edad))
-                    mensajeEdadTextBlock.Text = "";
+                string edadString = edadTextBox.Text;
+                int edad;
+                if (int.TryParse(edadString,out edad))
+                    mensajeEdadTextBlock.Text = (edad >=0)?"": "Edad incorrecta";
                 else
                     mensajeEdadTextBlock.Text = "Edad incorrecta";
             }

@@ -19,7 +19,6 @@
                    Width="82"
                    FontSize="14" />
         <TextBox x:Name="nombreTextBox"
-                 Tag="Nombre"
                  HorizontalAlignment="Left"
                  Height="30"
                  TextWrapping="Wrap"
@@ -36,7 +35,9 @@
                    Height="30"
                    Width="284" 
                    Foreground="gray"
-                   FontSize="14" />
+                   FontSize="14" 
+                   Text="Nombre del cliente"
+                   Visibility="Hidden"/>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,118,0,0"
                    TextWrapping="Wrap"
@@ -46,7 +47,6 @@
                    Width="82"
                    FontSize="14" />
         <TextBox x:Name="apellidoTextBox"
-                 Tag="Apellido"
                  HorizontalAlignment="Left"
                  Height="30"
                  Margin="69,144,0,0"
@@ -63,7 +63,9 @@
                    Height="33"
                    Width="284" 
                    Foreground="gray"
-                   FontSize="14" />
+                   FontSize="14"
+                   Text="Apellidos del cliente" 
+                   Visibility="Hidden"/>
         <TextBlock HorizontalAlignment="Left"
                    Margin="69,208,0,0"
                    TextWrapping="Wrap"
@@ -87,9 +89,8 @@
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
                    Height="30"
-                   Width="284" 
+                   Width="284"
                    Foreground="Red"
                    FontSize="14" />
-
     </Grid>
 </Window>
